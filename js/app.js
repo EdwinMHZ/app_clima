@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(temperatura).forEach(elemento => {
             let numero = elemento.firstChild.textContent.trim();
             const grados = (Number(numero) * (9 / 5)) + 32;
-            elemento.firstChild.textContent = grados;
+            elemento.firstChild.textContent = grados.toFixed(2);
         })
     });
 
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(temperatura).forEach(elemento => {
             let numero = elemento.firstChild.textContent.trim();
             const grados = (Number(numero) - 32) * (5 / 9);
-            elemento.firstChild.textContent = grados;
+            elemento.firstChild.textContent = grados.toFixed(2);
         })
     })
 
